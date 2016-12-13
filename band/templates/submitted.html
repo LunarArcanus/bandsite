@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Done!</title>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script>
+</head>
+
+<body>
+  <script>
+    $(function(){
+      setTimeout(function(){
+         window.location = "{% url 'bands' %}";
+       }, 5000);
+     });
+  </script>
+
+   <p>
+     Thank you for submitting band
+     <span style="color: blue;">
+       {{ band_name }}
+     </span>.
+   </p>
+   <p>You will be redirected in 5 seconds...</p>
+</body>
+
+</html>

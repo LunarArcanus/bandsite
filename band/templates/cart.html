@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script>
+  <script src="{% static 'site_media/js/simpleCart.min.js' %}"></script>
+  <link href="{% static 'site_media/css/navbar.css' %}" rel="stylesheet"/>
+  <link href="{% static 'site_media/css/cart.css' %}" rel="stylesheet"/>
+  <script src="{% static 'site_media/js/app.js' %}"></script>
+</head>
+
+<body>
+  <div id="nav_links">
+    <nav>
+      <span class="nav_link">
+        <a href="{% url 'index' %}">Index</a>
+      </span>
+      <span class="nav_link">
+        <a href="{% url 'bands' %}">Visit bands</a>
+      </span>
+      <span class="nav_link">
+        <a href="{% url 'form' %}">Submit</a>
+      </span>
+      <span class="nav_link">
+        <a href="{% url 'about' %}">About</a>
+      </span>
+      <span class="nav_link">
+        <a href="{% url 'merchandise' %}">Buy stuff!</a>
+      </span>
+      <span class="nav_link">
+        <a href="{% url 'cart' %}">Cart</a>
+      </span>
+    </nav>
+  </div><br/><br/><br/>
+<div class="simpleCart_items">
+</div>
+
+<button class="simpleCart_empty" onclick="javascript:;">Empty cart</button>
+<br/><br/>
+<button class="simpleCart_checkout" onclick="javascript:;">Checkout</button>
+</div>

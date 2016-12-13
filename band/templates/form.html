@@ -1,0 +1,48 @@
+{% load staticfiles %}
+{% block content %}
+<!doctype html>
+<html>
+<head>
+  <title>Submission form</title>
+  <link href="{% static 'site_media/css/form.css' %}" rel="stylesheet"/>
+  <link href="{% static 'site_media/css/navbar.css' %}" rel="stylesheet"/>
+</head>
+
+<body>
+  <div id="nav_links">
+		<nav>
+			<span class="nav_link">
+				<a href="{% url 'index' %}">Index</a>
+			</span>
+			<span class="nav_link">
+				<a href="{% url 'bands' %}">Visit bands</a>
+			</span>
+			<span class="nav_link">
+				<a href="{% url 'form' %}">Submit</a>
+			</span>
+			<span class="nav_link">
+				<a href="{% url 'about' %}">About</a>
+			</span>
+      <span class="nav_link">
+        <a href="{% url 'merchandise' %}">Buy stuff!</a>
+      </span>
+      <span class="nav_link">
+        <a href="{% url 'cart' %}">Cart</a>
+      </span>
+		</nav>
+	</div><br/><br/><br/>
+  <span id="header">Submit a band!</span>
+
+  <div id="form_div">
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Submit info!" />
+    </form>
+  </div>
+  </div>
+</body>
+</html>
+{% endblock content %}

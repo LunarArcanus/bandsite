@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+  <title>Buy our stuff!</title>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script>
+  <script src="{% static 'site_media/js/simpleCart.min.js' %}"></script>
+  <link href="{% static 'site_media/css/navbar.css' %}" rel="stylesheet"/>
+  <link href="{% static 'site_media/css/buy.css' %}" rel="stylesheet"/>
+  <script src="{% static 'site_media/js/app.js' %}"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="nav_links">
+  		<nav>
+  			<span class="nav_link">
+  				<a href="{% url 'index' %}">Index</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'bands' %}">Visit bands</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'form' %}">Submit</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'about' %}">About</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'merchandise' %}">Buy stuff!</a>
+  			</span>
+        <span class="nav_link">
+          <a href="{% url 'cart' %}">Cart</a>
+        </span>
+  		</nav>
+  	</div><br/><br/>
+
+    <div id="items">
+      {% for item in item_list %}
+      {% with img="site_media/images/merchandise/"|add:item.image %}
+      <div class="simpleCart_shelfItem">
+        <img src="{% static img %}"
+             class="item_img"
+             alt="Buy our merch! :P"/><br/>
+        <span class="item_name">{{item.name}}</span><br/><br/>
+        <span class="item_price">R{{item.price}}</span><br/><br/>
+        <a href="javascript:;" class="item_add">Add to cart</a><br/><br/>
+        <hr/>
+      </div>
+      {% endwith %}
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

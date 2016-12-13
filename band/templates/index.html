@@ -1,0 +1,86 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+		<title>Band Promotion</title>
+
+		<!-- Loading main css file -->
+		<link href="{% static 'site_media/css/style.css' %}" rel="stylesheet"/>
+    <link href="{% static 'site_media/css/navbar.css' %}" rel="stylesheet"/>
+    <link href="{% static 'site_media/images/favicon.ico' %}"
+          type="image/x-icon"
+          rel="shortcut icon"/>
+		<script src="{% static 'site_media/js/jquery-1.11.1.min.js' %}">
+	  </script>
+
+		<script src="{% static 'site_media/js/simpleCart.min.js' %}"></script>
+		<script src="{% static 'site_media/js/app.js' %}"></script>
+	</head>
+
+<body>
+	<div id="background_cycler" >
+
+		<script>
+			$('#background_cycler').hide();
+		</script>
+
+		<img class="active" src="{% static 'site_media/images/cycle/0.jpg' %}" alt="background image"/>
+		<img src="{% static 'site_media/images/cycle/1.jpg' %}" alt="background image"/>
+		<img src="{% static 'site_media/images/cycle/2.jpg' %}" alt="background image"/>
+		<img src="{% static 'site_media/images/cycle/3.jpg' %}" alt="background image"/>
+		<img src="{% static 'site_media/images/cycle/4.jpg' %}" alt="background image"/>
+		<img src="{% static 'site_media/images/cycle/5.jpg' %}" alt="background image"/>
+		<img src="{% static 'site_media/images/cycle/6.jpg' %}" alt="background image"/>
+	</div>
+
+	<div id="nav_links">
+		<nav>
+			<span class="nav_link">
+				<a href="{% url 'index' %}">Index</a>
+			</span>
+			<span class="nav_link">
+				<a href="{% url 'bands' %}">Visit bands</a>
+			</span>
+			<span class="nav_link">
+				<a href="{% url 'form' %}">Submit</a>
+			</span>
+			<span class="nav_link">
+				<a href="{% url 'about' %}">About</a>
+			</span>
+			<span class="nav_link">
+				<a href="{% url 'merchandise' %}">Buy stuff!</a>
+			</span>
+			<span class="nav_link">
+				<a href="{% url 'cart' %}">Cart</a>
+			</span>
+		</nav>
+	</div>
+
+	<div id="text_box">
+		In 2008 we started off as a small group of musicians. We knew where we were
+		going, but we didn't know how to get there. Local performances was something
+		we had already experienced - and experienced again - and after being signed
+		up by a label, we released 2 albums. Both sold out, but as soon as the
+		contract was over, we were let off.
+		<p><p>
+			The label went bankrupt a short while later.
+		</p></p>
+		<p><p>
+			It was then we realised that such one-sided relationships were always
+			short-lived, and what we needed was a worthwhile support that could both
+			fund us and share our 'treasures'. There had to be a fragment of genuine
+			care from both parties.<br/>
+			Eventually tiring of the search, we decided that it was time to start one
+			up ourselves. And well, here we are.<br/><br/>
+			Our goal is to promote artists and expose them to the crowd that may
+			otherwise never hear of them. Slowly but surely, we have been gaining
+			notable affiliates to join our cause and now we stand strong with some of
+			the most universally-acclaimed agencies backing us.<br/>
+			So what are you waiting for? Take that stage!
+		</p></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+#nav_links{
+  width: 40%;
+  position: fixed;
+  border-radius: 2px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: #3B28CC;
+  padding: 10px;
+}
+
+.nav_link{
+  padding: 20px;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+  <head>
+    <title>Band List</title>
+    <link href="{% static 'site_media/css/bands.css' %}" rel="stylesheet"/>
+    <link href="{% static 'site_media/css/navbar.css' %}" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <div id="nav_links">
+  		<nav>
+  			<span class="nav_link">
+  				<a href="{% url 'index' %}">Index</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'bands' %}">Visit bands</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'form' %}">Submit</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'about' %}">About</a>
+  			</span>
+        <span class="nav_link">
+          <a href="{% url 'merchandise' %}">Buy stuff!</a>
+        </span>
+        <span class="nav_link">
+          <a href="{% url 'cart' %}">Cart</a>
+        </span>
+  		</nav>
+  	</div><br/></br>
+  <div id="container">
+    <div id="left_pane">&nbsp;</div>
+    <div id="right_pane">&nbsp;</div>
+    <div id="band_cont">
+      <span id="heading">
+        Current Bands:
+      </span><br/><br/>
+      {% for band in band_list %}
+      <div class="indiv_band">
+        <span class="band_name">{{ band.name }}</span><br/><br/>
+        <span class="band_est">Established: {{ band.est_date.date }}</span><br/><br/>
+        <span class="band_pub">Submitted: {{ band.pub_date }}</span><br/><br/>
+        <span class="band_members">Members: {{ band.members }}</span></br><br/>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  </body>
+</html>

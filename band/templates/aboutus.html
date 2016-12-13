@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="{% static 'site_media/css/about.css' %}"/>
+    <link rel="stylesheet" href="{% static 'site_media/css/navbar.css' %}"/>
+  </head>
+
+  <body>
+    <div id="nav_links">
+  		<nav>
+  			<span class="nav_link">
+  				<a href="{% url 'index' %}">Index</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'bands' %}">Visit bands</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'form' %}">Submit</a>
+  			</span>
+  			<span class="nav_link">
+  				<a href="{% url 'about' %}">About</a>
+  			</span>
+        <span class="nav_link">
+          <a href="{% url 'merchandise' %}">Buy stuff!</a>
+        </span>
+        <span class="nav_link">
+          <a href="{% url 'cart' %}">Cart</a>
+        </span>
+  		</nav>
+  	</div><br/><br/><br/>
+<div id="text">
+<p>
+We are committed to helping local and international bands in spreading their music by handling the advertising and collaborating with firms that share our vision.
+It is important to recognise music which appeals to many but does not get the recognition it should, and our staff -
+which includes people who faced similar problems - will do what they can to assist you.<br/><br/>
+
+Our own vision is simple: we want to connect the world and the various artists through this platform, and guide those who are new.
+We all had to start somewhere.<br/><br/>
+Together, we can face all obstacles!
+</p>
+</div>
+  </body>
+</html>

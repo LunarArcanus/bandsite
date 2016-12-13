@@ -1,0 +1,25 @@
+html, body{
+  background-color: dimgrey;
+}
+
+#form_div{
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  margin: -150px 0 0 -300px;
+  top: 50%;
+  left: 50%;
+  color: white;
+}
+
+#header{
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  margin: -150px 0 0 -300px;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+}

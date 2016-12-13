@@ -1,0 +1,15 @@
+.simpleCart_items{
+	padding: 20px;
+}
+
+td{
+  padding: 20px;
+}
+
+.simpleCart_empty{
+  float: left;
+}
+
+.simpleCart_checkout{
+	float: right;
+}
